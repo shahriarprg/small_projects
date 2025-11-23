@@ -64,21 +64,21 @@ domain_ssl/
    ### 1️⃣ Install mailx
    Ubuntu/Debian:
   ```bash 
-    sudo apt update
-   sudo apt install mailutils -y
-   ```
+  sudo apt update
+  sudo apt install mailutils -y
+  ```
   mailutils provides /usr/bin/mailx.
   CentOS/RHEL/Fedora:
   ```bash
-    sudo yum install mailx -y
-   # or for dnf-based systems
-   sudo dnf install mailx -y
+  sudo yum install mailx -y
+  # or for dnf-based systems
+  sudo dnf install mailx -y
   ```
   ### 2️⃣ Test it
    After installing, test sending a simple email:
   ```bash
-   echo "Test email body" | mailx -s "Test Subject" your_email@example.com
-   ```
+  echo "Test email body" | mailx -s "Test Subject" your_email@example.com
+  ```
    If you get the email, your script should now be able to send alerts.
 
    ### 3️⃣ Optional: Configure a Mail Transfer Agent (MTA)
@@ -87,10 +87,10 @@ domain_ssl/
    sudo apt install postfix -y
    ```
 
-During setup, enter your server domain, and it will relay outgoing emails. Use an SMTP relay
-Use a legitimate SMTP server like Gmail, Office 365, or your hosting provider to send emails.
-Postfix will authenticate to that relay, so SPF/DKIM checks pass.
-Example for Gmail SMTP in `/etc/postfix/main.cf`:
+   During setup, enter your server domain, and it will relay outgoing emails. Use an SMTP relay
+   Use a legitimate SMTP server like Gmail, Office 365, or your hosting provider to send emails.
+   Postfix will authenticate to that relay, so SPF/DKIM checks pass.
+   Example for Gmail SMTP in `/etc/postfix/main.cf`:
 ```bash
 relayhost = [smtp.gmail.com]:587
 smtp_sasl_auth_enable = yes
