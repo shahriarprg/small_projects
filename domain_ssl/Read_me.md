@@ -70,9 +70,9 @@ domain_ssl/
   mailutils provides /usr/bin/mailx.
   CentOS/RHEL/Fedora:
   ```bash
-  sudo yum install mailx -y
+  sudo yum install postfix  -y
   # or for dnf-based systems
-  sudo dnf install mailx -y
+  sudo dnf install postfix  -y
   ```
   ### 2️⃣ Test it
    After installing, test sending a simple email:
